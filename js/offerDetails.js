@@ -18,6 +18,9 @@ function displayProduct(productXml) {
 	$('#offerImage').attr('src', 'pics/' + $(productXml).find("offer").find("image").text());
 	$('#offerLocation').text($(productXml).find("offer").find("location").text());
 	$('#offerDescription').text($(productXml).find("offer").find("description").text());
+	//document.title = $(productXml).find("title").text();
+	$(document).attr('title', $(productXml).find("title").text());
+
 }
 
 function getUrlVars() {
